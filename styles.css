@@ -50,8 +50,8 @@
 }
 
 .handbook-banner, .handbook-header {
-  background: #fff1c7;
-  border-left: 5px solid #a8612d;
+  background: #f2f6fa;
+  border-left: 5px solid #003366;
   padding: 1rem 1.5rem;
   border-radius: 6px;
   margin: 1.5rem 0;
@@ -78,7 +78,7 @@
 
 .handbook-header a {
   white-space: nowrap;
-  background: #a8612d;
+  background: #003366;
   color: #fff;
   padding: 0.5rem 1rem;
   border-radius: 4px;
@@ -87,5 +87,5 @@
 }
 
 .handbook-header a:hover {
-  background: #7f4423;
+  background: #004080;
 }
