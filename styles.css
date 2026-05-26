@@ -5,11 +5,31 @@
   padding-bottom: 0;
 }
 
+#quarto-header,
+#quarto-header.headroom,
+#quarto-header.headroom--pinned,
+#quarto-header.headroom--unpinned {
+  position: fixed !important;
+  transform: none !important;
+}
+
 .navbar .navbar-brand {
   display: block;
   float: none;
-  font-size: 1.6rem;
+  font-size: 1.25rem;
   margin-bottom: 0.4rem;
+}
+
+.navbar-title {
+  font-size: 1.25rem;
+}
+
+.quarto-title h1.title {
+  font-size: 1.55rem;
+}
+
+.quarto-title .subtitle {
+  font-size: 1rem;
 }
 
 .navbar .navbar-collapse {
@@ -30,11 +50,17 @@
 }
 
 .handbook-banner, .handbook-header {
-  background: #f2f6fa;
-  border-left: 5px solid #003366;
+  background: #fff1c7;
+  border-left: 5px solid #a8612d;
   padding: 1rem 1.5rem;
   border-radius: 6px;
   margin: 1.5rem 0;
+}
+
+.nav-link.disabled {
+  color: #777 !important;
+  cursor: default;
+  pointer-events: none;
 }
 
 /* For the cite section */
@@ -52,7 +78,7 @@
 
 .handbook-header a {
   white-space: nowrap;
-  background: #003366;
+  background: #a8612d;
   color: #fff;
   padding: 0.5rem 1rem;
   border-radius: 4px;
@@ -61,6 +87,5 @@
 }
 
 .handbook-header a:hover {
-  background: #004080;
+  background: #7f4423;
 }
-
