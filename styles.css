@@ -16,20 +16,20 @@
 .navbar .navbar-brand {
   display: block;
   float: none;
-  font-size: 1.25rem;
+  font-size: 1.05rem;
   margin-bottom: 0.4rem;
 }
 
 .navbar-title {
-  font-size: 1.25rem;
+  font-size: 1.05rem;
 }
 
 .quarto-title h1.title {
-  font-size: 1.55rem;
+  font-size: 1.35rem;
 }
 
 .quarto-title .subtitle {
-  font-size: 1rem;
+  font-size: 0.92rem;
 }
 
 .navbar .navbar-collapse {

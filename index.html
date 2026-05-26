@@ -237,57 +237,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </style>
 </div>
 <p><img src="images/cover.jpg" class="img-fluid" width="175"></p>
-<button id="bookmark-button" class="favorite-btn" type="button" style="display:none;">
-  <span class="bookmark-star">★</span> Bookmark
-</button>
-
-<script>
-(function () {
-  // 1) Move button into "On this page" sidebar after Quarto builds it
-  function moveButton() {
-    const toc = document.querySelector("#quarto-margin-sidebar .toc-active")
-            || document.querySelector("#quarto-margin-sidebar #TOC")
-            || document.querySelector("#TOC");
-
-    const btn = document.getElementById("bookmark-button");
-    if (!toc || !btn) return;
-
-    btn.style.display = "inline-block";
-
-    const wrap = document.createElement("div");
-    wrap.style.textAlign = "left";
-    wrap.style.paddingRight = "0em";   // ← moves it left
-
-    wrap.appendChild(btn);
-    toc.appendChild(wrap);
-  }
-
-  // Try now, and also after load in case the TOC is inserted late
-  document.addEventListener("DOMContentLoaded", moveButton);
-  window.addEventListener("load", moveButton);
-
-  // 2) Event delegation: click works even if button is moved/replaced
-  document.addEventListener("click", function (e) {
-    const btn = e.target.closest("#bookmark-button");
-    if (!btn) return;
-
-    if (window.sidebar && window.sidebar.addPanel) { // Firefox (legacy)
-      window.sidebar.addPanel(document.title, window.location.href, "");
-    } else if (window.external && ("AddFavorite" in window.external)) { // IE
-      window.external.AddFavorite(location.href, document.title);
-    } else if (window.opera && window.print) { // Opera
-      btn.title = document.title;
-      return true;
-    } else { // modern browsers
-      alert(
-        "Press " +
-        (navigator.userAgent.toLowerCase().indexOf("mac") !== -1 ? "Command (⌘)" : "Ctrl") +
-        " + D to bookmark this page."
-      );
-    }
-  });
-})();
-</script>
+<!-- Bookmark control disabled for now; modern browsers do not expose reliable scripted bookmarking. -->
 <section id="welcome" class="level2">
 <h2 class="anchored" data-anchor-id="welcome">Welcome</h2>
 <div class="handbook-banner">
